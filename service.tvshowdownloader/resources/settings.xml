@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <!-- General -->
+  <category label="30247">
+    <setting id="interval" type="enum" label="30200" values="Never|01 Hours|02 Hours|03 Hours|04 Hours|05 Hours|06 Hours|07 Hours|08 Hours|09 Hours|10 Hours|11 Hours|12 Hours|13 Hours|14 Hours|15 Hours|16 Hours|17 Hours|18 Hours|19 Hours|20 Hours|21 Hours|22 Hours|23 Hours|24 Hours" default="1" />
+    <setting id="quality" type="enum" label="30201" lvalues="30203|30204|30205|30206|30207" default="1" />
+    <setting id="downloadPath" type="folder" label="30202" default="" />
+  </category>
+  <category label="30248">
+    <setting id="eztv" type="bool" label="eztv.it" default="true"/>
+  </category>
+</settings>
