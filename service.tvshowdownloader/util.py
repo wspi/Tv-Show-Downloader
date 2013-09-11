@@ -12,14 +12,15 @@ engines = []
 if settings.getSetting("eztv") == "true":
    engines.append("resources.lib.engines.eztv.engine")
 
-print engines
 engines = map(lambda x: __import__(x, fromlist='.'),engines)
+
+def sendNotification(message, time):
+    xbmc.executebuiltin('Notification(%s, %s, %d)'%("Tv Show Downloader",message, time))
 
 def syncShows():
     checkDB()
     shows = listShows()
     for engine in engines:
-        print engine
         dir(engine)
 	for show in shows:
             showInfo = lastEpisode(show['tvshowid'])

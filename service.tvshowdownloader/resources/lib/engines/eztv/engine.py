@@ -74,6 +74,7 @@ def searchEpisodes():
                                 print "Newer Episode found for " + str(name) + "!"
                                 newEpisodes.append([info, links])
                     else:
+			util.sendNotification("Found new Episode for " + str(name) + "!", 3000)
 			print "Found new Episode for " + str(name) + "!"
                         newEpisodes.append([info, links]) 
                 else:
@@ -97,5 +98,6 @@ def searchEpisodes():
                 except:
 		    print "Unable to download: " + str(link)
 	else:
+	    util.sendNotification("No new episodes for " + str(name), 3000)
 	    print "No new episodes for " + str(name)
   

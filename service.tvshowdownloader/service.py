@@ -9,13 +9,12 @@ def getInterval():
    
 def schedule(sc):
     interval = getInterval()
-    print "Checking for new Episodes!"
+    util.sendNotification("Checking for new Episodes!", 3000)
     print "Checking interval: " + str(interval)
     util.syncShows()
     util.searchEpisodes()
     sc.enter(interval, 1, schedule, (sc,))
 
 def run():
-    interval = getInterval()
-    s.enter(interval, 1, schedule, (s,))
+    schedule(s)
     s.run()
